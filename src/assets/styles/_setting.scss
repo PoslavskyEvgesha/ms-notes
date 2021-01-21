@@ -1,0 +1,41 @@
+.setting {
+  &-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  &-select {
+    display: flex;
+    cursor: pointer;
+    width: fit-content;
+    align-items: center;
+    margin-bottom: 8px;
+    &-radio {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      border: 2px solid dodgerblue;
+      margin-right: 10px;
+      opacity: 0.5;
+    }
+    &-label {
+      font-size: 18px;
+    }
+    &.active {
+      .setting-select-radio {
+        position: relative;
+        opacity: 1;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 2px;
+          right: 2px;
+          top: 2px;
+          bottom: 2px;
+          border-radius: 50%;
+          background-color: dodgerblue;
+        }
+      }
+    }
+  }
+}
